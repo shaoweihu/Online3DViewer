@@ -12,8 +12,8 @@ import { ImporterPly } from './importerply.js';
 import { ImporterOcct } from './importerocct.js';
 import { ImporterStl } from './importerstl.js';
 import { ImporterBim } from './importerbim.js';
-import { ImporterThreeAmf, ImporterThree3mf, ImporterThreeDae, ImporterThreeFbx, ImporterThreeWrl } from './importerthree.js';
-
+// import { ImporterThreeAmf, ImporterThree3mf, ImporterThreeDae, ImporterThreeFbx, ImporterThreeWrl } from './importerthree.js';
+import { ImporterThreeAmf, ImporterThree3mf, ImporterThreeDae, ImporterThreeFbx } from './importerthree.js';
 import * as fflate from 'fflate';
 import { ImporterFcstd } from './importerfcstd.js';
 
