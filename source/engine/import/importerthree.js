@@ -13,7 +13,7 @@ import * as THREE from 'three';
 import { TGALoader } from 'three/examples/jsm/loaders/TGALoader.js';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader.js';
-import { VRMLLoader } from 'three/examples/jsm/loaders/VRMLLoader.js';
+// import { VRMLLoader } from 'three/examples/jsm/loaders/VRMLLoader.js';
 import { ThreeMFLoader } from 'three/examples/jsm/loaders/3MFLoader.js';
 import { AMFLoader } from 'three/examples/jsm/loaders/AMFLoader.js';
 
@@ -362,7 +362,7 @@ export class ImporterThreeWrl extends ImporterThreeBase
 
     CreateLoader (manager)
     {
-        return new VRMLLoader (manager);
+        // return new VRMLLoader (manager);
     }
 
     GetMainObject (loadedObject)

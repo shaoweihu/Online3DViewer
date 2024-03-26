@@ -94,7 +94,7 @@ export class Importer
             new ImporterFcstd (),
             new ImporterThreeFbx (),
             new ImporterThreeDae (),
-            new ImporterThreeWrl (),
+            // new ImporterThreeWrl (),
             new ImporterThree3mf (),
             new ImporterThreeAmf ()
         ];

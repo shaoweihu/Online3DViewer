@@ -177,7 +177,7 @@ export {
     ImporterThreeBase,
     ImporterThreeFbx,
     ImporterThreeDae,
-    ImporterThreeWrl,
+    // ImporterThreeWrl,
     ImporterThree3mf,
     ImporterThreeAmf,
     ColorToMaterialConverter,
