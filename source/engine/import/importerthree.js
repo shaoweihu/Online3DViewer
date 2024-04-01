@@ -16,6 +16,9 @@ import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader.js';
 // import { VRMLLoader } from 'three/examples/jsm/loaders/VRMLLoader.js';
 import { ThreeMFLoader } from 'three/examples/jsm/loaders/3MFLoader.js';
 import { AMFLoader } from 'three/examples/jsm/loaders/AMFLoader.js';
+import { BVHLoader } from 'three/examples/jsm/loaders/BVHLoader.js';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
+import { Rhino3dmLoader } from 'three/examples/jsm/loaders/3DMLoader.js';
 
 export class ImporterThreeBase extends ImporterBase
 {
@@ -436,6 +439,93 @@ export class ImporterThreeAmf extends ImporterThreeBase
     CreateLoader (manager)
     {
         return new AMFLoader (manager);
+    }
+
+    GetMainObject (loadedObject)
+    {
+        return loadedObject;
+    }
+}
+
+
+export class ImporterThreeBvh extends ImporterThreeBase
+{
+    constructor ()
+    {
+        super ();
+    }
+
+    CanImportExtension (extension)
+    {
+        return extension === 'bvh';
+    }
+
+    GetUpDirection ()
+    {
+        return Direction.Z;
+    }
+
+    CreateLoader (manager)
+    {
+        return new BVHLoader (manager);
+    }
+
+    GetMainObject (loadedObject)
+    {
+        return loadedObject;
+    }
+}
+
+export class ImporterThreeDraco extends ImporterThreeBase
+{
+    constructor ()
+    {
+        super ();
+    }
+
+    CanImportExtension (extension)
+    {
+        return extension === 'bvh';
+    }
+
+    GetUpDirection ()
+    {
+        return Direction.Z;
+    }
+
+    CreateLoader (manager)
+    {
+        return new BVHLoader (manager);
+    }
+
+    GetMainObject (loadedObject)
+    {
+        return loadedObject;
+    }
+}
+
+export class ImporterThreeRhino3dm extends ImporterThreeBase
+{
+    constructor ()
+    {
+        super ();
+    }
+
+    CanImportExtension (extension)
+    {
+        return extension === '3dm';
+    }
+
+    GetUpDirection ()
+    {
+        return Direction.Z;
+    }
+
+    CreateLoader (manager)
+    {
+        const loader = new Rhino3dmLoader(manager)
+        loader.setLibraryPath( 'https://cdn.jsdelivr.net/npm/rhino3dm@8.4.0/' )
+        return loader;
     }
 
     GetMainObject (loadedObject)

@@ -13,7 +13,7 @@ import { ImporterOcct } from './importerocct.js';
 import { ImporterStl } from './importerstl.js';
 import { ImporterBim } from './importerbim.js';
 // import { ImporterThreeAmf, ImporterThree3mf, ImporterThreeDae, ImporterThreeFbx, ImporterThreeWrl } from './importerthree.js';
-import { ImporterThreeAmf, ImporterThree3mf, ImporterThreeDae, ImporterThreeFbx } from './importerthree.js';
+import { ImporterThreeAmf, ImporterThree3mf, ImporterThreeDae, ImporterThreeFbx, ImporterThreeBvh, ImporterThreeRhino3dm } from './importerthree.js';
 import * as fflate from 'fflate';
 import { ImporterFcstd } from './importerfcstd.js';
 
@@ -88,7 +88,7 @@ export class Importer
             new Importer3ds (),
             new ImporterGltf (),
             new ImporterBim (),
-            new Importer3dm (),
+            // new Importer3dm (),
             new ImporterIfc (),
             new ImporterOcct (),
             new ImporterFcstd (),
@@ -96,7 +96,10 @@ export class Importer
             new ImporterThreeDae (),
             // new ImporterThreeWrl (),
             new ImporterThree3mf (),
-            new ImporterThreeAmf ()
+            new ImporterThreeAmf (),
+            new ImporterThreeBvh (),
+            new ImporterThreeRhino3dm (),
+            
         ];
         this.fileList = new ImporterFileList ();
         this.model = null;
