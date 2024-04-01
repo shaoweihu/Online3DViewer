@@ -1,6 +1,6 @@
 {
 	"name": "online-three-viewer",
-	"version": "0.12.5",
+	"version": "0.12.6",
 	"description": "Online 3D Viewer",
 	"license": "MIT",
 	"type": "module",
