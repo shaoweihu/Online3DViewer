@@ -1,6 +1,6 @@
 {
 	"name": "online-three-viewer",
-	"version": "0.12.6",
+	"version": "0.12.7",
 	"description": "Online 3D Viewer",
 	"license": "MIT",
 	"type": "module",
@@ -78,8 +78,7 @@
 		"fflate": "0.8.1",
 		"occt-import-js": "0.0.21",
 		"rhino3dm": "8.0.1",
-		"three": "0.158.0",
-		"web-ifc": "0.0.44"
+		"three": "0.158.0"
 	},
 	"eslintConfig": {
 		"env": {
